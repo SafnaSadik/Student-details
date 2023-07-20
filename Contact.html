@@ -1,0 +1,93 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Contact Page </title>  
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: lightskyblue;  
+}  
+button {   
+       background-color: blue;   
+       width: 100%;  
+        color: white;   
+        padding: 15px;   
+        margin: 25px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+ 
+ input[type=text] {   
+        width: 100%;   
+        margin: 10px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box; 
+	position: relative;
+	 
+    } 
+ 
+ input[type=password] {   
+        width: 100%;   
+        margin: 10px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box; 
+}
+
+.container {   
+	position: relative;
+  	z-index: 1;
+  	max-width: 500px;
+ 	margin: 0 auto;
+        padding: 60px;   
+	height: 550px;
+        background-color: white;  
+    }   
+span
+{
+	float: right;
+}
+
+}
+ button:hover {   
+        opacity: 0.7;   
+    }   
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }   
+          
+</style>   
+</head>    
+<body>    
+    <center> <h1> CONTACT </h1> </center>   
+    <form>  
+        <div class="container">   
+            <label>First name : </label> <br>  
+            <input type="text" placeholder="Enter Firstname" name="fname" ><br> 
+ 
+            <label>Last name : </label> <br>  
+            <input type="text" placeholder="Enter Lastname" name="lname" ><br><br>
+
+	    <label>Mobile: </label>
+	    <input type="text" name="mobile" placeholder="only 10 digits are allowed"><br>
+
+	    <label>Email: </label>
+	    <input type="text" name="email" placeholder="Enter Email"><br>
+
+	    <label for="query">What Do You Have in Mind: </label><br><br>
+	    <textarea id="queries" name="queries" placeholder="Please enter your queries"
+            rows="5" cols= "65"></textarea>
+
+            <button type="submit">Submit</button><br>   
+
+        </div>   
+    </form>     
+</body>     
+</html>  
+
