@@ -1,50 +1,12 @@
 <!DOCTYPE html>   
-<html>   
+<html lang="en">   
 <head>  
 <meta name="viewport" content="width=device-width, initial-scale=1">  
 <title> Registration Page </title>  
+
+<link href="styles.css" rel="stylesheet">
+
 <style>   
-Body {  
-  font-family: Calibri, Helvetica, sans-serif;  
-  background-color: lightskyblue;  
-}  
-button {   
-       background-color: blue;   
-       width: 100%;  
-        color: white;   
-        padding: 15px;   
-        margin: 25px 0px;   
-        border: none;   
-        cursor: pointer;   
-         }   
- 
- input[type=text] {   
-        width: 100%;   
-        margin: 10px 0;  
-        padding: 12px 20px;   
-        display: inline-block;   
-        border: 2px solid green;   
-        box-sizing: border-box; 
-	position: relative;
-	 
-    } 
-
-input[type=password] {   
-        width: 100%;   
-        margin: 10px 0;  
-        padding: 12px 20px;   
-        display: inline-block;   
-        border: 2px solid green;   
-        box-sizing: border-box; 
-}
-
-input[type=radio]{
-    width: 10%;
-    padding-left: 0%;
-    border: 1px solid rgb(168, 166, 166);
-    border-radius: 4px;
-    resize: vertical;
-}
 
 .container {   
 	position: relative;
@@ -52,31 +14,32 @@ input[type=radio]{
   	max-width: 750px;
  	margin: 0 auto;
         padding: 60px;   
-	height: 1000px;
+	height: 1050px;
         background-color: white;  
     }   
 
-}
- button:hover {   
-        opacity: 0.7;   
-    }   
-  .cancelbtn {   
-        width: auto;   
-        padding: 10px 18px;  
-        margin: 10px 5px;  
-    }   
-          
+
+  
 </style>   
 </head>    
-<body>    
+<body>  
+ <header class="header">
+<a href="#" class="logo"><img src="studentlogo.jpg" alt="Student Logo" width="50" height="50"></a>
+    <nav class="nav-items">
+	<a href="d:\Tasks\homepage.html">Home</a>
+
+    </nav>
+
+  </header>
+  
     <center> <h1> REGISTER HERE </h1> </center>   
     <form>  
         <div class="container">   
             <label>First name : </label> <br>  
-            <input type="text" placeholder="Enter Firstname" name="fname" ><br> 
+            <input type="text" placeholder="Enter First name" name="fname" ><br> 
  
             <label>Last name : </label> <br>  
-            <input type="text" placeholder="Enter Lastname" name="lname" ><br><br>
+            <input type="text" placeholder="Enter Last name" name="lname" ><br><br>
 
 	    <label>Date of birth : </label>
             <input type="date" id="birthday" name="birthday"> <br><br>
@@ -124,7 +87,12 @@ input[type=radio]{
 
             <button type="submit">Register</button><br>   
         </div>   
-    </form>     
+    </form><br><br>
+<footer>
+        <div class="row copyright">
+        <p>Copyright &copy; 2023 Student Portal | All Rights Reserved</p>
+      </div>
+    </footer>  
 </body>     
 </html>  
 
