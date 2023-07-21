@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomePage</title>
+  <link href="styles.css" rel="stylesheet">
+  
+<style>
+    
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: black;
+      padding: 20px 80px;
+      
+    }
+
+    .footer .copy,.address {
+      color: #fff;
+      font-size: 16px;
+
+    }
+    
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+    }
+
+    .bottom-links .links span {
+      font-size: 16px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 5px 0;
+
+    }
+
+    .bottom-links .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 5px 1px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+<a href="#" class="logo"><img src="studentlogo.jpg" alt="Student Logo" width="50" height="50"></a>
+    <nav class="nav-items">
+	<a href="d:\Tasks\Homepage.html">Home</a>
+	<a href="d:\Tasks\About.html">About</a>
+	<a href="d:\Tasks\Contact.html">Contact</a>
+	<a href="d:\Tasks\Register.html">Sign Up</a>
+	<a href="d:\Tasks\Login.html">Sign In</a>
+
+    </nav>
+
+  </header>
+
+<section>
+  <img class="mySlides" src="student1.jpg"
+  style="width:100%">
+  <img class="mySlides" src="student2.jpg"
+  style="width:100%">
+  <img class="mySlides" src="student3.jpg"
+  style="width:100%">
+  <img class="mySlides" src="student4.jpg"
+  style="width:100%">
+  <img class="mySlides" src="student5.jpg"
+  style="width:100%">
+
+</section>
+
+  <footer class="footer">
+    <div class="copy">Copyright &copy; 2023 Student Portal | All Rights Reserved<br></div>
+    <div class="address"><img src="Location-logo.png" alt="Location Logo" width="20px" height="20px"> 123 Street <br> XY Avenue <br> Near HHH Landmark <br> New York City</div>
+
+    <div class="bottom-links">
+      <div class="links">
+        <span>Social Links : </span>
+        <a href="https://www.facebook.com"><img src="Facebook-logo.png" alt="Facebook Logo" width="65" height="39"></a>
+        <a href="https://www.instagram.com"><img src="Instagram-logo.png" alt="Instagram Logo" width="70" height="39"></a>
+        <a href="https://www.twitter.com"><img src="Twitter-logo.png" alt="Twitter Logo" width="60" height="35"></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 5000);
+}
+</script>
+
+</body>
+
+</html>
