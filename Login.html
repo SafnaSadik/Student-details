@@ -1,42 +1,12 @@
 <!DOCTYPE html>   
-<html>   
+<html lang="en">   
 <head>  
 <meta name="viewport" content="width=device-width, initial-scale=1">  
 <title> Login Page </title>  
+
+<link href="styles.css" rel="stylesheet">
+
 <style>   
-Body {  
-  font-family: Calibri, Helvetica, sans-serif;  
-  background-color: lightskyblue;  
-}  
-button {   
-       background-color: blue;   
-       width: 100%;  
-        color: white;   
-        padding: 15px;   
-        margin: 25px 0px;   
-        border: none;   
-        cursor: pointer;   
-         }   
- 
- input[type=text] {   
-        width: 100%;   
-        margin: 10px 0;  
-        padding: 12px 20px;   
-        display: inline-block;   
-        border: 2px solid green;   
-        box-sizing: border-box; 
-	position: relative;
-	 
-    } 
- 
- input[type=password] {   
-        width: 100%;   
-        margin: 10px 0;  
-        padding: 12px 20px;   
-        display: inline-block;   
-        border: 2px solid green;   
-        box-sizing: border-box; 
-}
 
 .container {   
 	position: relative;
@@ -46,25 +16,19 @@ button {
         padding: 60px;   
 	height: 350px;
         background-color: white;  
-    }   
-span
-{
-	float: right;
-}
 
-}
- button:hover {   
-        opacity: 0.7;   
-    }   
-  .cancelbtn {   
-        width: auto;   
-        padding: 10px 18px;  
-        margin: 10px 5px;  
-    }   
-          
 </style>   
 </head>    
-<body>    
+<body> 
+ <header class="header">
+<a href="#" class="logo"><img src="studentlogo.jpg" alt="Student Logo" width="50" height="50"></a>
+    <nav class="nav-items">
+	<a href="d:\Tasks\homepage.html">Home</a>
+
+    </nav>
+
+  </header>
+     
     <center> <h1> LOGIN </h1> </center>   
     <form>  
         <div class="container">   
@@ -76,7 +40,14 @@ span
             <input type="checkbox" checked="checked"> Remember me   
             <span> <a href="#"> Forgot password? </a></span>   
         </div>   
-    </form>     
+    </form> <br><br><br><br>
+ <footer>
+        <div class="row copyright">
+        <p>Copyright &copy; 2023 Student Portal | All Rights Reserved</p>
+      </div>
+    </footer>
+
+  
 </body>     
 </html>  
 
