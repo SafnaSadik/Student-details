@@ -14,7 +14,7 @@
   	max-width: 500px;
  	margin: 0 auto;
         padding: 60px;   
-	height: 550px;
+	height: 580px;
         background-color: white;  
     }   
 
@@ -33,25 +33,26 @@
     <center> <h1> CONTACT US </h1> </center>   
     <form>  
         <div class="container">   
-            <label>First name : </label> <br>  
-            <input type="text" placeholder="Enter First name" name="fname" ><br> 
+            <label>First name <font color="red">*</font> : </label> <br>  
+            <input type="text" placeholder="Enter First name" name="fname" required><br> 
  
             <label>Last name : </label> <br>  
-            <input type="text" placeholder="Enter Last name" name="lname" ><br>
+            <input type="text" placeholder="Enter Last name" name="lname"><br>
 
-	    <label>Mobile: </label>
-	    <input type="text" name="mobile" placeholder="only 10 digits are allowed"><br>
+	    <label>Mobile <font color="red">*</font> : </label>
+	    <input type="text" name="mobile" placeholder="only 10 digits are allowed" required><br>
 
-	    <label>Email: </label>
-	    <input type="text" name="email" placeholder="Enter Email"><br><br>
+	    <label>Email <font color="red">*</font> : </label>
+	    <input type="text" name="email" placeholder="Enter Email" required><br><br>
 
-	    <label>What Do You Have in Mind: </label><br><br>
-	    <textarea class="textinput" placeholder="Please enter your queries"
+	    <label>What Do You Have in Mind <font color="red">*</font> : </label><br><br>
+	    <textarea class="textinput" placeholder="Please enter your queries" required
             ></textarea>
 
             <button type="submit">Submit</button><br>   
+<p><font color="red">*</font> Required</p>  
+        </div> 
 
-        </div>   
     </form> <br><br>
 <footer>
         <div class="row copyright">
