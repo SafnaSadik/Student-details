@@ -4,53 +4,76 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">  
 <title> Login Page </title>  
 
-<link href="styles.css" rel="stylesheet">
+<link href="Assets/Css/styles.css" rel="stylesheet">
 
-<style>   
-
-.container {   
-	position: relative;
-  	z-index: 1;
-  	max-width: 300px;
- 	margin: 0 auto;
-        padding: 60px;   
-	height: 350px;
-        background-color: white;  
-
-</style>   
 </head>    
+
 <body> 
- <header class="header">
-<a href="#" class="logo"><img src="studentlogo.jpg" alt="Student Logo" width="50" height="50"></a>
-    <nav class="nav-items">
-	<a href="d:\Tasks\homepage.html">Home</a>
+ 	<header class="header">
+		<a href="#" class="logo"><img src="D:\Tasks\images\studentlogo.jpg" alt="Student Logo" width="50" height="50"></a>
+    		<nav class="nav-items">
+			<a href="d:\Tasks\homepage.html">Home</a>
 
-    </nav>
+    		</nav>
 
-  </header>
+  	</header>
      
-    <center> <h1>LOGIN </h1> </center>   
-    <form>  
-        <div class="container">   
-            <label>Username : </label> <br>  
-            <input type="text" placeholder="Enter Username" name="username" id="uname" required>
-            <label>Password : </label> <br>  
-            <input type="password" placeholder="Enter Password" name="password" required><br>  
-            <button type="submit">Login</button><br>   
-            <input type="checkbox" checked="checked"> Remember me   
-            <span> <a href="#"> Forgot password? </a></span>   
-
-        </div> 
+    	<center> <h1>LOGIN </h1> </center>   
+    		<form method="post" id="form1">  
+        		<div class="logincontainer">   
+            			<label>Username : </label> <br>  
+            			<input type="text" placeholder="Enter Username" name="username" id="uname" onfocusout="borderred(uname)" required>
+            			
+				<label>Password : </label> <br>  
+            			<input type="password" placeholder="Enter Password" name="password" id="pass" onfocusout="borderred(pass)" required><br>
   
-    </form> <br><br><br><br>
- <footer>
-        <div class="row copyright">
-        <p>Copyright &copy; 2023 Student Portal | All Rights Reserved</p>
-      </div>
-    </footer>
+            			<button type="submit" onclick="submitLogin(event)">Login</button><br>   
+            			
+				<input type="checkbox" checked="checked"> Remember me   
+            
+				<span> <a href="#"> Forgot password? </a></span>   
 
- 
+        		</div> 
+  
+    		</form> <br><br><br><br>
+<footer>
+	<div class="row copyright">
+        	<p>Copyright &copy; 2023 Student Portal | All Rights Reserved</p>
+      	</div>
+</footer>
+
+<script>
+
+function borderred(bred)
+{
+	if(bred.value==="")
+	{
+		bred.style.border = "2px solid red";
+		
+	}
+	else
+	{
+		bred.style.border = "1px solid black";
+	}
+}
+
+function submitLogin(event)
+{
+	event.preventDefault();
+	let myForm=document.getElementById("form1");
+	if(myForm.checkValidity())
+	{
+		alert("Login Successful");
+	}
+	else
+	{
+		alert("Fill All Fields");
+	}
+}
+
+</script>
 
 </body>     
+
 </html>  
 
