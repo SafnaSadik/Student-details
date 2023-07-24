@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">  
 <title> Registration Page </title>  
 
-<link href="styles.css" rel="stylesheet">
+<link href="Assets/Css/styles.css" rel="stylesheet">
 
 <style>   
 
@@ -12,6 +12,7 @@
 {
   	display:none;
   	background: #fff;
+	z-index:10;
   	color: #000;
   	position: absolute;
   	padding: 10px;
@@ -26,17 +27,6 @@
   	padding: 4px 36px;
   	font-size: 18px;
 }
-
-.container 
-{   
-	position: relative;
-  	z-index: 1;
-  	max-width: 750px;
- 	margin: 0 auto;
-        padding: 45px;   
-	height: 1079px;
-        background-color: white;  
-}   
 
 .valid 
 {
@@ -67,7 +57,7 @@
 </head>    
 <body>  
 <header class="header">
-	<a href="#" class="logo"><img src="studentlogo.jpg" alt="Student Logo" width="50" height="50"></a>
+	<a href="#" class="logo"><img src="D:\Tasks\images\studentlogo.jpg" alt="Student Logo" width="50" height="50"></a>
     	<nav class="nav-items">
 		<a href="d:\Tasks\homepage.html">Home</a>
 
@@ -76,8 +66,8 @@
 </header>
   
 <center> <h1> REGISTER HERE </h1> </center>   
-    	<form>  
-        	<div class="container">   
+    	<form method="post" id="form2">  
+        	<div class="registercontainer">   
             		<label>First name <font color="red">*</font> : </label> <br>  
             		<input type="text" placeholder="Enter First name" name="fname" required><br> 
 
@@ -96,7 +86,7 @@
             		<input type="radio" id="other" name="gender" value="other"/>Other<br><br>
 
 	    		<label>Mobile <font color="red">*</font> : </label>
-	    		<input type="text" name="mobile" placeholder="only 10 digits are allowed" id="num" onfocusout="validateMobile(num)" required><br>
+	    		<input type="number" name="mobile" placeholder="only 10 digits are allowed" id="num" onfocusout="validateMobile(num)" required><br>
 
 	    		<label>Email <font color="red">*</font> : </label>
 	    		<input type="text" name="email" placeholder="Enter Email" id="ema" onfocusout="validateEmail(ema)" required><br>
@@ -130,14 +120,15 @@
  
 
             		<label>Confirm Password <font color="red">*</font> : </label> <br>  
-            		<input type="password" placeholder="Enter Password" name="password" id="psw2" onfocusout="confirmPassword()" required><br> 
-
+            		<input type="password" placeholder="Enter Password" name="password" id="psw2" onkeyup="validate_password()" required><br> 
+			<span id="wrong_pass_alert"></span>
 	    
 
-            		<button type="submit" onclick="submitComplete()">Register</button><br>
+            		<button type="submit" onclick="submitRegister(event)">Register</button><br>
    
 			<p><font color="red">*</font> Required</p> 
-        	</div>   
+        	</div>  
+		 
     	</form><br><br>
 
 <div id="message">
@@ -154,6 +145,8 @@
         <p>Copyright &copy; 2023 Student Portal | All Rights Reserved</p>
       	</div>
 </footer>
+
+<script src="D:\Tasks\Scripts\myScript.js"></script>
 
 <script>
 var myInput = document.getElementById("psw1");
@@ -243,58 +236,40 @@ myInput.onkeyup = function()
  	 }
 }
 
-function confirmPassword()
+function validate_password() 
 {
 	var pass = document.getElementById('psw1').value;
 	var confirm_pass = document.getElementById('psw2').value;
-	if (pass != confirm_pass)
+	if (pass != confirm_pass) 
 	{
-		alert("Enter same password.");
-		return false;
+		document.getElementById('wrong_pass_alert').style.color = 'red';
+		document.getElementById('wrong_pass_alert').innerHTML
+                    = '☒ Use same password';
+                document.getElementById('create').disabled = true;
+                document.getElementById('create').style.opacity = (0.4);
+        } else 
+	{
+                document.getElementById('wrong_pass_alert').style.color = 'green';
+                document.getElementById('wrong_pass_alert').innerHTML =
+                    '🗹 Password Matched';
+                document.getElementById('create').disabled = false;
+                document.getElementById('create').style.opacity = (1);
+        }
+}
+
+function submitRegister(event)
+{
+	event.preventDefault();
+	let myForm=document.getElementById("form2");
+	if(myForm.checkValidity())
+	{
+		alert("Registration Complete");
 	}
 	else
 	{
-		alert("Passwords Match!!");
-		return true;
+		alert("Fill All Fields");
 	}
-}    
-
- 
-function submitComplete() 
-{
-	alert("Your response is submitted");
-} 
-
-
-function validateEmail(emailId)
-{
-	var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-	if(emailId.value.match(mailformat))
-	{
-		alert("Valid email address.");
-		return true;
-	}
-	else
-	{
-		alert("Invalid email address.");
-		return false;
-	}
-}    
-
-function validateMobile(nums)
-{
-	var no = /[0-9]/g;
-	if(nums.value.match(no)&&nums<11)
-	{
-		alert("Valid Mobile Number.");
-		return true;
-	}
-	else
-	{
-		alert("Invalid Mobile Number.");
-		return false;
-	}
-}    
+}
 
 </script>
   
