@@ -75,25 +75,25 @@ font-family: Calibri, Helvetica, sans-serif;
       background-repeat: no-repeat;
     }
 
-    .intro h1 {
-      font-family: sans-serif;
-      font-size: 80px;
-      -webkit-text-stroke: 3px white;
-      color: #000;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin: 0;
-    }
+.intro h1 
+{
+      	font-family: sans-serif;
+      	font-size: 80px;
+      	color: #fff;
+      	font-weight: bold;
+      	text-transform: uppercase;
+      	margin: 0;
+}
 
-    .intro p {
-      font-size: 30px;
-      -webkit-text-stroke: 1.5px black;
-      color: #d1d1d1;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin: 20px 0;
-      text-align=center;
-    }
+.intro p 
+{
+      	font-size: 30px;
+      	color: #fff;
+      	font-weight: bold;
+      	text-transform: uppercase;
+      	margin: 20px 0;
+      	text-align=center;
+}
 
 
     .services {
