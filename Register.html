@@ -5,33 +5,10 @@
 <title> Registration Page </title>  
 
 <link href="Assets/Css/styles.css" rel="stylesheet">
+  
+</head>
 
-<style>   
-
-#message 
-{
-  	display:none;
-  	background: #fff;
-	z-index:10;
-  	color: #000;
-  	position: absolute;
-  	padding: 10px;
-  	margin-top: -413px;
-  	left:80%;
-  	right:1%;
-  	border-radius:8px;
-}
-
-#message p 
-{
-  	padding: 4px 36px;
-  	font-size: 18px;
-}
-
-.valid 
-{
-  	color: green;
-}
+<style>
 
 .valid:before 
 {
@@ -41,20 +18,7 @@
 }
 
 
-.invalid 
-{
-  	color: red;
-}
-
-.invalid:before 
-{
-  	position: relative;
-  	left: -30px;
-  	content: "✖";
-} 
-</style> 
-  
-</head>    
+</style>    
 <body>  
 <header class="header">
 	<a href="#" class="logo"><img src="D:\Tasks\images\studentlogo.jpg" alt="Student Logo" width="50" height="50"></a>
@@ -67,66 +31,94 @@
   
 <center> <h1> Sign up here </h1> </center>   
     	<form method="post" id="form2">  
-        	<div class="registercontainer">   
+        	<div class="registercontainer">
+			<div>   
             		<label>First name <font color="red">*</font> : </label> <br>  
-            		<input type="text" placeholder="Enter First name" name="fname" required><br> 
+            		<input type="text" placeholder="Enter First name" name="fname" required> 
+			</div>
 
+			<div>
             		<label>Last name <font color="red">*</font> : </label> <br>  
-            		<input type="text" placeholder="Enter Last name" name="lname" required><br><br>
+            		<input type="text" placeholder="Enter Last name" name="lname" required>
+			</div>
 
-	    		<label>Date of birth <font color="red">*</font> : </label>
-            		<input type="date" id="birthday" name="birthday" required> <br><br>
+			<div>
+	    		<label><br>Date of birth <font color="red">*</font> : </label>
+            		<input type="date" id="todayDate" name="birthday" max="" required>
+			</div> 
 
-	    		<label>Age : </label> <br>  
-            		<input type="text" placeholder="Enter Age" name="age"><br><br>
+			<div>
+	    		<label><br>Age : </label> <br>  
+            		<input type="text" placeholder="Enter Age" name="age">
+			</div>
 
- 	    		<label>Gender : </label>
+			<div>
+ 	    		<label><br>Gender : </label>
             		<input type="radio" id="male" name="gender" value="male"/>Male
             		<input type="radio" id="female" name="gender" value="female"/>Female
-            		<input type="radio" id="other" name="gender" value="other"/>Other<br><br>
+            		<input type="radio" id="other" name="gender" value="other"/>Other
+			</div>
 
-	    		<label>Mobile <font color="red">*</font> : </label>
-	    		<input type="number" name="mobile" placeholder="only 10 digits are allowed" id="num" onfocusout="validateMobile(num)" required><br>
+			<div>
+	    		<label><br>Mobile <font color="red">*</font> : </label>
+	    		<input type="number" name="mobile" placeholder="only 10 digits are allowed" id="num" onfocusout="validateMobile(num)" required>
+			</div>
+			<div class = "errmessagemob" id="errormob"></div>
 
+			<div>
 	    		<label>Email <font color="red">*</font> : </label>
-	    		<input type="text" name="email" placeholder="Enter Email" id="ema" onfocusout="validateEmail(ema)" required><br>
+	    		<input type="text" name="email" placeholder="Enter Email" id="ema" onfocusout="validateEmail(ema)" required>
+			</div>
+			<div class = "errmessage" id="error"></div>
 
+			<div>
 	    		<label>Address <font color="red">*</font> : </label>
-	    		<input type="text" name="address" placeholder="Enter Address"><br><br>
+	    		<input type="text" name="address" placeholder="Enter Address">
+			</div>
 
-	    		<label for="state">State <font color="red">*</font> : </label>
+			<div>
+	    		<label for="state"><br>State <font color="red">*</font> : </label>
 
 			<select name="state" id="state">
   				<option value="kerala">Kerala</option>
   				<option value="tamil nadu">Tamil Nadu</option>
  				<option value="karnataka">Karnataka</option>
   				<option value="goa">Goa</option>
-			</select><br><br>
+			</select>
+			</div>
 
-	    		<label for="city">City <font color="red">*</font> : </label>
+			<div>
+	    		<label for="city"><br>City <font color="red">*</font> : </label>
 
 			<select name="city" id="city">
   				<option value="aluva">Aluva</option>
   				<option value="ernakulam">Ernakulam</option>
  				<option value="kochi">Kochi</option>
   				<option value="trivandrum">Trivandrum</option>
-			</select><br><br>
+			</select>
+			</div>
 
-            		<label>Username <font color="red">*</font> : </label> <br>  
-            		<input type="text" placeholder="Enter Username" name="username" required><br>  
-
+			<div>
+            		<label><br>Username <font color="red">*</font> : </label> <br>  
+            		<input type="text" placeholder="Enter Username" name="username" required>
+			</div> 
+			
+			<div>
             		<label>Password <font color="red">*</font> : </label> <br>  
-            		<input type="password" placeholder="Enter Password" name="password" id="psw1"  title="Must contain at least one number, one uppercase, lowercase letter, one special character and at least 8 and less than 15 characters" required><br>
+            		<input type="password" placeholder="Enter Password" name="password" id="psw1"  title="Must contain at least one number, one uppercase, lowercase letter, one special character and at least 8 and less than 15 characters" required>
+			</div>
  
-
-            		<label>Confirm Password <font color="red">*</font> : </label> <br>  
-            		<input type="password" placeholder="Enter Password" name="password" id="psw2" onkeyup="validate_password()" required><br> 
+			<div>
+            		<label>Confirm password <font color="red">*</font> : </label> <br>  
+            		<input type="password" placeholder="Enter Password" name="password" id="psw2" onkeyup="validate_password()" required>
+			</div> 
 			<span id="wrong_pass_alert"></span>
 	    
-
-            		<button type="submit" onclick="submitRegister(event)">Register</button><br>
-   
-			<p><font color="red">*</font> Required</p> 
+			<div>
+            		<button type="submit" onclick="submitRegister(event)">Sign up</button>
+   			<p><font color="red">*</font> Required
+			<span>Already a member? <a href="d:\Tasks\Login.html">Sign in</a></span></p> 
+			</div>
         	</div>  
 		 
     	</form><br><br>
@@ -147,131 +139,6 @@
 </footer>
 
 <script src="D:\Tasks\Scripts\myScript.js"></script>
-
-<script>
-var myInput = document.getElementById("psw1");
-var letter = document.getElementById("letter");
-var capital = document.getElementById("capital");
-var number = document.getElementById("number");
-var special = document.getElementById("special");
-var length = document.getElementById("length");
-
-
-myInput.onfocus = function()
-{
-	document.getElementById("message").style.display = "block";
-}
-
-
-myInput.onblur = function()
-{
-	document.getElementById("message").style.display = "none";
-}
-
-
-myInput.onkeyup = function()
-{
-
-	var lowerCaseLetters = /[a-z]/g;
-	if(myInput.value.match(lowerCaseLetters)) 
-	{  
-		letter.classList.remove("invalid");
-		letter.classList.add("valid");
-	}
-	else 
-	{
-		letter.classList.remove("valid");
-		letter.classList.add("invalid");
-	}
-  
- 
-	var upperCaseLetters = /[A-Z]/g;
-	if(myInput.value.match(upperCaseLetters)) 
-	{  
-		capital.classList.remove("invalid");
-		capital.classList.add("valid");
- 	} 
-	else 
-	{
-		capital.classList.remove("valid");
-		capital.classList.add("invalid");
-	}
-
- 
-	var numbers = /[0-9]/g;
-	if(myInput.value.match(numbers)) 
-	{  
-		number.classList.remove("invalid");
-		number.classList.add("valid");
-	} 
-	else 
-	{
-		number.classList.remove("valid");
-		number.classList.add("invalid");
-  	}
-
- 
-  	var specialChars = /[-.@$!%+=<>#?&]/g;
-  	if(myInput.value.match(specialChars)) 
-	{  
-		special.classList.remove("invalid");
-    		special.classList.add("valid");
-  	} 
-	else 
-	{
-    		special.classList.remove("valid");
-    		special.classList.add("invalid");
-  	}
-  
- 
-  	if(myInput.value.length >= 8 && myInput.value.length<15) 
-	{
-    		length.classList.remove("invalid");
-    		length.classList.add("valid");
-  	} 
-	else 
-	{
-    		length.classList.remove("valid");
-    		length.classList.add("invalid");
- 	 }
-}
-
-function validate_password() 
-{
-	var pass = document.getElementById('psw1').value;
-	var confirm_pass = document.getElementById('psw2').value;
-	if (pass != confirm_pass) 
-	{
-		document.getElementById('wrong_pass_alert').style.color = 'red';
-		document.getElementById('wrong_pass_alert').innerHTML
-                    = '☒ Use same password';
-                document.getElementById('create').disabled = true;
-                document.getElementById('create').style.opacity = (0.4);
-        } else 
-	{
-                document.getElementById('wrong_pass_alert').style.color = 'green';
-                document.getElementById('wrong_pass_alert').innerHTML =
-                    '🗹 Password Matched';
-                document.getElementById('create').disabled = false;
-                document.getElementById('create').style.opacity = (1);
-        }
-}
-
-function submitRegister(event)
-{
-	event.preventDefault();
-	let myForm=document.getElementById("form2");
-	if(myForm.checkValidity())
-	{
-		alert("Registration Complete");
-	}
-	else
-	{
-		alert("Fill All Fields");
-	}
-}
-
-</script>
   
 </body>     
 </html>  
