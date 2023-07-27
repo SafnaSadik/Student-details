@@ -20,27 +20,42 @@
    
     	<center> <h1> CONTACT US </h1> </center>   
     		<form method="post" id="form3">  
-        		<div class="contactcontainer">   
+        		<div class="contactcontainer"> 
+				<div>  
             			<label>First name <font color="red">*</font> : </label> <br>  
-            			<input type="text" placeholder="Enter First name" name="fname" required><br> 
+            			<input type="text" placeholder="Enter First name" name="fname" required>
+				</div> 
  
+				<div>
             			<label>Last name : </label> <br>  
-            			<input type="text" placeholder="Enter Last name" name="lname"><br>
+            			<input type="text" placeholder="Enter Last name" name="lname">
+				</div>
 
+				<div>
 	    			<label>Mobile <font color="red">*</font> : </label>
-	    			<input type="number" name="mobile" placeholder="only 10 digits are allowed" id="num" onfocusout="validateMobile(num)" required><br>
+	    			<input type="number" name="mobile" placeholder="only 10 digits are allowed" id="num" onfocusout="validateMobile(num)" required>
+				</div>
+				<div class = "errmessagemob" id="errormob"></div>
 
+				<div>
 	    			<label>Email <font color="red">*</font> : </label>
-	    			<input type="text" name="email" placeholder="Enter Email" id="ema" onfocusout="validateEmail(ema)" required><br>
+	    			<input type="text" name="email" placeholder="Enter Email" id="ema" onfocusout="validateEmail(ema)" required>
+				</div>
+				<div class = "errmessage" id="error"></div>
 
+				<div>
 	    			<label>What Do You Have in Mind <font color="red">*</font> : </label><br><br>
 	    			<textarea class="textinput" placeholder="Please enter your queries" required></textarea>
+				</div>
 
+				<div>
  			        <button type="submit" onclick="submitContact(event)">Submit</button><br>   
-				<p><font color="red">*</font> Required</p>  
+				<p><font color="red">*</font> Required</p> 
+				</div> 
         		</div> 
 
-    		</form> <br><br>
+    		</form><br> 
+
 <footer>
 	<div class="row copyright">
         	<p>Copyright &copy; 2023 Student Portal | All Rights Reserved</p>
@@ -49,23 +64,6 @@
 
 <script src="D:\Tasks\Scripts\myScript.js"></script>
 
-<script>
-function submitContact(event)
-{
-	event.preventDefault();
-	let myForm=document.getElementById("form3");
-	if(myForm.checkValidity())
-	{
-		alert("Query Submitted");
-	}
-	else
-	{
-		alert("Fill All Fields");
-	}
-}
-
-
-</script>
 
 </body>     
 
