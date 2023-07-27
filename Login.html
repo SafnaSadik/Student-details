@@ -20,18 +20,31 @@
      
     	<center> <h1>Sign in </h1> </center>   
     		<form method="post" id="form1">  
-        		<div class="logincontainer">   
-            			<label>Username : </label> <br>  
-            			<input type="text" placeholder="Enter Username" name="username" id="uname" onfocusout="borderred(uname)" required>
+        		<div class="logincontainer">
+				<div>   
+	    			<label>Email id : </label>
+	    			<input type="text" name="email" placeholder="Enter Email" id="emai" onfocusout="validateEmailLogin(emai)" required>
+				</div>
+				<div class = "errmessage" id="error"></div>
             			
+				<div>
 				<label>Password : </label> <br>  
-            			<input type="password" placeholder="Enter Password" name="password" id="pass" onfocusout="borderred(pass)" required><br>
+            			<input type="password" placeholder="Enter Password" name="password" id="pass" onfocusout="borderred(pass)" required>
+				</div>
+				<div class = "errmessagepass" id="errorpass"></div> 
   
-            			<button type="submit" onclick="submitLogin(event)">Login</button><br>   
+				<div>
+            			<button type="submit" onclick="submitLogin(event)">Sign in</button>
+				</div>   
             			
-				<input type="checkbox" checked="checked"> Remember me   
-            
-				<span> <a href="#"> Forgot password? </a></span>   
+				<div>
+				<input type="checkbox" checked="checked"> Remember me           
+				<span> <a href="#"> Forgot password? </a></span> 
+				</div>
+	
+				<div>
+				<p><center>Not a member? <a href="d:\Tasks\Register.html">Sign Up</a></center></p>
+				</div>  
 
         		</div> 
   
@@ -42,36 +55,7 @@
       	</div>
 </footer>
 
-<script>
-
-function borderred(bred)
-{
-	if(bred.value==="")
-	{
-		bred.style.border = "2px solid red";
-		
-	}
-	else
-	{
-		bred.style.border = "1px solid black";
-	}
-}
-
-function submitLogin(event)
-{
-	event.preventDefault();
-	let myForm=document.getElementById("form1");
-	if(myForm.checkValidity())
-	{
-		alert("Login Successful");
-	}
-	else
-	{
-		alert("Fill All Fields");
-	}
-}
-
-</script>
+<script src="D:\Tasks\Scripts\myScript.js"></script>
 
 </body>     
 
