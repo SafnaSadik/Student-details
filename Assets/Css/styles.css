@@ -1,9 +1,60 @@
+.footer
+{
+	display: flex;
+      	justify-content: space-between;
+      	align-items: center;
+      	background-color: black;
+      	padding: 20px 80px;
+      
+}
+
+.footer .copy,.address 
+{
+	color: #fff;
+      	font-size: 16px;
+
+}
+
+.bottom-links 
+{
+      	display: flex;
+      	justify-content: space-around;
+      	align-items: center;
+      	padding: 10px 0;
+}
+
+.bottom-links .links 
+{
+      	display: flex;
+      	flex-direction: row;
+      	justify-content: center;
+      	align-items: center;
+      	padding: 0px;
+}
+
+.bottom-links .links span 
+{
+      	font-size: 16px;
+      	color: #fff;
+      	text-transform: uppercase;
+      	margin: 5px 0;
+
+}
+
+.bottom-links .links a 
+{
+      	text-decoration: none;
+      	color: #a1a1a1;
+      	padding: 5px 1px;
+
+}
+
 body 
 {
      	margin: 0;
       	box-sizing: border-box;
 	font-family: Calibri, Helvetica, sans-serif;  
-  	background-color: lightgrey;  
+  	background-color: grey;  
 }
 
 .header 
@@ -103,6 +154,7 @@ body
       	text-align=center;
 }
 
+
 .services 
 {
       	display: flex;
@@ -124,7 +176,7 @@ body
 {
       	width: fit-content;
       	font-size: 50px;
-      	color: #333333;
+      	color: #000;
       	border-radius: 50%;
       	border: 2px solid #333333;
       	padding: 12px;
@@ -133,7 +185,7 @@ body
 .services .work .work-heading 
 {
       	font-size: 20px;
-      	color: #333333;
+      	color: #000;
       	text-transform: uppercase;
      	margin: 10px 0;
 }
@@ -141,7 +193,7 @@ body
 .services .work .work-text 
 {
       	font-size: 15px;
-      	color: #585858;
+      	color: #000;
       	margin: 10px 0;
 }
 
@@ -165,7 +217,7 @@ body
 .about-founder-text h2 
 {
       	font-size: 30px;
-      	color: #333333;
+      	color: #000;
       	text-transform: uppercase;
       	margin: 0;
 }
@@ -173,7 +225,7 @@ body
 .about-founder-text p 
 {
       	font-size: 15px;
-      	color: #585858;
+      	color: #000;
       	margin: 10px 0;
 }
 
@@ -301,3 +353,62 @@ span
         background-color: white;  
 }   
         
+
+#message 
+{
+  	display:none;
+  	background: #fff;
+	z-index:10;
+  	color: #000;
+  	position: absolute;
+  	padding: 10px;
+  	margin-top: -413px;
+  	left:80%;
+  	right:1%;
+  	border-radius:8px;
+}
+
+#message p 
+{
+  	padding: 4px 36px;
+  	font-size: 18px;
+}
+
+.valid 
+{
+  	color: green;
+}
+
+
+.invalid 
+{
+  	color: red;
+}
+
+.invalid:before 
+{
+  	position: relative;
+  	left: -30px;
+  	content: "✖";
+}
+
+.errmessage
+{
+	font-size : 14px;
+	color : red;
+	text-align: center;
+}
+
+.errmessagepass
+{
+	font-size : 14px;
+	color : red;
+	text-align: center;
+}
+
+.errmessagemob
+{
+	font-size : 14px;
+	color : red;
+	text-align: center;
+}
