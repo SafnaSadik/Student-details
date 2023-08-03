@@ -216,5 +216,52 @@ function submitContact(event)
 	}
 }
 
+function popularCities() 
+{
+	const stateSelect = document.getElementById("state");
+	const citySelect = document.getElementById("city");
+
+	citySelect.innerHTML = '<option value="">Select City</option>';
+
+	const selectedState = stateSelect.value;
+
+	if (selectedState === "Kerala") 
+	{
+		const keralaCities = ["Kochi", "Trivandrum" , "Alappuzha" , "Malappuram"];
+		populateOptions(citySelect, keralaCities);
+	}
+ 
+	else if (selectedState === "Tamil Nadu") 
+	{
+        	const tamilNaduCities = ["Chennai", "Coimbatore" , "Madurai" , "Salem"];
+        	populateOptions(citySelect, tamilNaduCities);
+    	} 
+
+	else if (selectedState === "Karnataka") 
+	{
+        	const karnatakaCities = ["Bangalore", "Mangaluru" , "Hassan" , "Uduppi"];
+        	populateOptions(citySelect, karnatakaCities);
+    	} 
+	
+	else if (selectedState === "Goa")
+	{
+		const goaCities = ["Panaji" , "Canacona" , "Margao" , "Mapusa"]
+		populateOptions(citySelect, goaCities);
+    	}
+}
+
+function populateOptions(selectElement, options)
+{
+	options.forEach(city => 
+	{
+        	const option = document.createElement("option");
+        	option.text = city;
+        	option.value = city;
+        	selectElement.add(option);
+    	});
+}
+
 var today = new Date().toISOString().split('T')[0];
 document.getElementById("todayDate").setAttribute("max",today);
+
+
